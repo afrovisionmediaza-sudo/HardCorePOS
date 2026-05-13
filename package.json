@@ -6,11 +6,9 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "launcher": "electron launcher.js",
     "dist": "electron-builder --win --x64",
     "dist:mac": "electron-builder --mac --x64",
-    "dist:all": "electron-builder --win --mac",
-    "update:check": "node update-checker.js"
+    "dist:all": "electron-builder --win --mac"
   },
   "devDependencies": {
     "electron": "^28.0.0",
@@ -23,7 +21,6 @@
   "build": {
     "appId": "com.hardcore.pos",
     "productName": "HardCorePOS",
-    "publisherName": "HardCore Tech",
     "directories": {
       "output": "installers"
     },
@@ -40,13 +37,6 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true
-    },
-    "publish": [
-      {
-        "provider": "github",
-        "owner": "hardcoretech",
-        "repo": "fiscalpos"
-      }
-    ]
+    }
   }
 }
