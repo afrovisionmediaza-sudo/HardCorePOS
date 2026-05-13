@@ -1,42 +1,21 @@
 {
   "name": "hardcorepos",
   "version": "1.0.0",
-  "description": "HardCore Tech - Fiscal POS & Repair Management System",
-  "author": "HardCore Tech",
+  "description": "HardCore Tech - Fiscal POS & Repair Management",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder --win --x64",
-    "dist:mac": "electron-builder --mac --x64",
-    "dist:all": "electron-builder --win --mac"
+    "dist:mac": "electron-builder --mac"
   },
   "devDependencies": {
     "electron": "^28.0.0",
     "electron-builder": "^24.13.3"
   },
-  "dependencies": {
-    "electron-updater": "^6.1.7",
-    "electron-log": "^5.0.1"
-  },
   "build": {
     "appId": "com.hardcore.pos",
     "productName": "HardCorePOS",
-    "directories": {
-      "output": "installers"
-    },
-    "win": {
-      "target": "nsis",
-      "icon": "icon.ico"
-    },
     "mac": {
-      "target": "dmg",
-      "icon": "icon.icns"
-    },
-    "nsis": {
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true,
-      "createStartMenuShortcut": true
+      "target": "dmg"
     }
   }
 }
